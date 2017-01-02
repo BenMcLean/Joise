@@ -1,6 +1,6 @@
 apply plugin: 'java'
 apply plugin: 'maven'
-apply plugin: 'signing'
+//apply plugin: 'signing'
 
 sourceCompatibility = 1.6
 sourceSets.main.java.srcDirs = [ "src/" ]
@@ -34,9 +34,9 @@ artifacts {
 	archives sourcesJar
 }
 
-signing {
-	sign configurations.archives
-}
+// signing {
+// 	sign configurations.archives
+// }
 
 group = 'com.sudoplay.joise'
 version = '1.0.2'
