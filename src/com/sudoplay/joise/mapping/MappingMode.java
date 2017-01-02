@@ -49,5 +49,43 @@
 package com.sudoplay.joise.mapping;
 
 public enum MappingMode {
-  NORMAL, SEAMLESS_X, SEAMLESS_Y, SEAMLESS_Z, SEAMLESS_XY, SEAMLESS_XZ, SEAMLESS_YZ, SEAMLESS_XYZ
+    NORMAL, SEAMLESS_X, SEAMLESS_Y, SEAMLESS_Z, SEAMLESS_XY, SEAMLESS_XZ, SEAMLESS_YZ, SEAMLESS_XYZ;
+
+    public String toString() {
+        return toString(this);
+    }
+
+    public static String toString(MappingMode mappingMode) {
+        switch (mappingMode) {
+            case NORMAL:
+                return "NORMAL";
+            case SEAMLESS_X:
+                return "SEAMLESS_X";
+            case SEAMLESS_Y:
+                return "SEAMLESS_Y";
+            case SEAMLESS_Z:
+                return "SEAMLESS_Z";
+            case SEAMLESS_XY:
+                return "SEAMLESS_XY";
+            case SEAMLESS_XZ:
+                return "SEAMLESS_XZ";
+            case SEAMLESS_YZ:
+                return "SEAMLESS_YZ";
+            case SEAMLESS_XYZ:
+                return "SEAMLESS_XYZ";
+        }
+        throw (new UnsupportedOperationException());
+    }
+
+    public static MappingMode get(String string) {
+        if (string == "NORMAL") return NORMAL;
+        else if (string == "SEAMLESS_X") return SEAMLESS_X;
+        else if (string == "SEAMLESS_Y") return SEAMLESS_Y;
+        else if (string == "SEAMLESS_Z") return SEAMLESS_Z;
+        else if (string == "SEAMLESS_XY") return SEAMLESS_XY;
+        else if (string == "SEAMLESS_XZ") return SEAMLESS_XZ;
+        else if (string == "SEAMLESS_YZ") return SEAMLESS_YZ;
+        else if (string == "SEAMLESS_XYZ") return SEAMLESS_XYZ;
+        throw (new UnsupportedOperationException());
+    }
 }

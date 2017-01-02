@@ -457,7 +457,7 @@ public class ModuleCombiner extends Module {
 
     ModulePropertyMap props = new ModulePropertyMap(this);
 
-    writeEnum("type", type, props);
+    props.put("type", type.toString().toLowerCase());
 
     for (int i = 0; i < MAX_SOURCES; i++) {
       writeScalar("source" + i, sources[i], props, map);

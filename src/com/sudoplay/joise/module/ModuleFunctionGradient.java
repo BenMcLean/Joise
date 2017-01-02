@@ -184,7 +184,7 @@ public class ModuleFunctionGradient extends SourcedModule {
 
     ModulePropertyMap props = new ModulePropertyMap(this);
 
-    writeEnum("axis", axis, props);
+    props.put("axis", axis.toString().toLowerCase());
     writeDouble("spacing", spacing, props);
     writeSource(props, map);
 
