@@ -52,9 +52,9 @@ import com.sudoplay.joise.JoiseException;
 import com.sudoplay.joise.ModuleInstanceMap;
 import com.sudoplay.joise.ModuleMap;
 import com.sudoplay.joise.ModulePropertyMap;
+import com.sudoplay.util.AtomicInteger;
 
 import java.lang.reflect.Method;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public abstract class Module {
 
