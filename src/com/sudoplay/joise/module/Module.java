@@ -352,4 +352,38 @@ public abstract class Module {
         props.put(key, String.valueOf(value));
 
     }
+
+    public static Module makeModule(String string) {
+        if (string.equalsIgnoreCase("ModuleAbs")) return new ModuleAbs();
+        if (string.equalsIgnoreCase("ModuleAutoCorrect")) return new ModuleAutoCorrect();
+        if (string.equalsIgnoreCase("ModuleBasisFunction")) return new ModuleBasisFunction();
+        if (string.equalsIgnoreCase("ModuleBias")) return new ModuleBias();
+        if (string.equalsIgnoreCase("ModuleBlend")) return new ModuleBlend();
+        if (string.equalsIgnoreCase("ModuleBrightContrast")) return new ModuleBrightContrast();
+        if (string.equalsIgnoreCase("ModuleCache")) return new ModuleCache();
+        if (string.equalsIgnoreCase("ModuleCellGen")) return new ModuleCellGen();
+        if (string.equalsIgnoreCase("ModuleCellular")) return new ModuleCellular();
+        if (string.equalsIgnoreCase("ModuleClamp")) return new ModuleClamp();
+        if (string.equalsIgnoreCase("ModuleCos")) return new ModuleCos();
+        if (string.equalsIgnoreCase("ModuleFloor")) return new ModuleFloor();
+        if (string.equalsIgnoreCase("ModuleFractal")) return new ModuleFractal();
+        if (string.equalsIgnoreCase("ModuleFunctionGradient")) return new ModuleFunctionGradient();
+        if (string.equalsIgnoreCase("ModuleGain")) return new ModuleGain();
+        if (string.equalsIgnoreCase("ModuleGradient")) return new ModuleGradient();
+        if (string.equalsIgnoreCase("ModuleInvert")) return new ModuleInvert();
+        if (string.equalsIgnoreCase("ModuleMagnitude")) return new ModuleMagnitude();
+        if (string.equalsIgnoreCase("ModuleNormalizedCoords")) return new ModuleNormalizedCoords();
+        if (string.equalsIgnoreCase("ModulePow")) return new ModulePow();
+        if (string.equalsIgnoreCase("ModuleRotateDomain")) return new ModuleRotateDomain();
+        if (string.equalsIgnoreCase("ModuleSawtooth")) return new ModuleSawtooth();
+        if (string.equalsIgnoreCase("ModuleScaleDomain")) return new ModuleScaleDomain();
+        if (string.equalsIgnoreCase("ModuleScaleOffset")) return new ModuleScaleOffset();
+        if (string.equalsIgnoreCase("ModuleSelect")) return new ModuleSelect();
+        if (string.equalsIgnoreCase("ModuleSin")) return new ModuleSin();
+        if (string.equalsIgnoreCase("ModuleSphere")) return new ModuleSphere();
+        if (string.equalsIgnoreCase("ModuleTiers")) return new ModuleTiers();
+        if (string.equalsIgnoreCase("ModuleTranslateDomain")) return new ModuleTranslateDomain();
+        if (string.equalsIgnoreCase("ModuleTriangle")) return new ModuleTriangle();
+        throw (new UnsupportedOperationException());
+    }
 }

@@ -78,14 +78,14 @@ public enum MappingMode {
     }
 
     public static MappingMode get(String string) {
-        if (string == "NORMAL") return NORMAL;
-        else if (string == "SEAMLESS_X") return SEAMLESS_X;
-        else if (string == "SEAMLESS_Y") return SEAMLESS_Y;
-        else if (string == "SEAMLESS_Z") return SEAMLESS_Z;
-        else if (string == "SEAMLESS_XY") return SEAMLESS_XY;
-        else if (string == "SEAMLESS_XZ") return SEAMLESS_XZ;
-        else if (string == "SEAMLESS_YZ") return SEAMLESS_YZ;
-        else if (string == "SEAMLESS_XYZ") return SEAMLESS_XYZ;
+        if (string.equalsIgnoreCase("NORMAL")) return NORMAL;
+        if (string.equalsIgnoreCase("SEAMLESS_X")) return SEAMLESS_X;
+        if (string.equalsIgnoreCase("SEAMLESS_Y")) return SEAMLESS_Y;
+        if (string.equalsIgnoreCase("SEAMLESS_Z")) return SEAMLESS_Z;
+        if (string.equalsIgnoreCase("SEAMLESS_XY")) return SEAMLESS_XY;
+        if (string.equalsIgnoreCase("SEAMLESS_XZ")) return SEAMLESS_XZ;
+        if (string.equalsIgnoreCase("SEAMLESS_YZ")) return SEAMLESS_YZ;
+        if (string.equalsIgnoreCase("SEAMLESS_XYZ")) return SEAMLESS_XYZ;
         throw (new UnsupportedOperationException());
     }
 }

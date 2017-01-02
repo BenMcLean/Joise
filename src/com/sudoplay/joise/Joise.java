@@ -108,7 +108,7 @@ public class Joise {
         Entry<String, ModulePropertyMap> e = it.next();
         ModulePropertyMap props = e.getValue();
         String moduleName = "com.sudoplay.joise.module." + props.get("module");
-        module = (Module) Class.forName(moduleName).newInstance();
+        module = Module.makeModule(moduleName);
         module.buildFromPropertyMap(props, im);
         if (module instanceof SeedableModule
             && ((SeedableModule) module).hasSeedName()) {
