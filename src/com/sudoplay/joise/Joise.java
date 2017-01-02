@@ -51,7 +51,6 @@ package com.sudoplay.joise;
 import com.sudoplay.joise.module.Module;
 import com.sudoplay.joise.module.SeedableModule;
 import com.sudoplay.util.Assert;
-import com.sudoplay.util.reflect.ClassReflection;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -109,7 +108,7 @@ public class Joise {
         Entry<String, ModulePropertyMap> e = it.next();
         ModulePropertyMap props = e.getValue();
         String moduleName = "com.sudoplay.joise.module." + props.get("module");
-        module = (Module) ClassReflection.forName(moduleName).newInstance();
+        module = (Module) Class.forName(moduleName).newInstance();
         module.buildFromPropertyMap(props, im);
         if (module instanceof SeedableModule
             && ((SeedableModule) module).hasSeedName()) {
