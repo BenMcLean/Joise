@@ -992,7 +992,7 @@ public class ModuleFractal extends SeedableModule {
 
     ModulePropertyMap props = new ModulePropertyMap(this);
 
-    props.put("type", type.toString().toLowerCase());
+    writeEnum("type", type, props);
     writeLong("octaves", numOctaves, props);
     writeDouble("frequency", frequency, props);
     writeDouble("lacunarity", lacunarity, props);

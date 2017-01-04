@@ -49,43 +49,5 @@
 package com.sudoplay.joise.mapping;
 
 public enum MappingMode {
-    NORMAL, SEAMLESS_X, SEAMLESS_Y, SEAMLESS_Z, SEAMLESS_XY, SEAMLESS_XZ, SEAMLESS_YZ, SEAMLESS_XYZ;
-
-    public String toString() {
-        return toString(this);
-    }
-
-    public static String toString(MappingMode mappingMode) {
-        switch (mappingMode) {
-            case NORMAL:
-                return "NORMAL";
-            case SEAMLESS_X:
-                return "SEAMLESS_X";
-            case SEAMLESS_Y:
-                return "SEAMLESS_Y";
-            case SEAMLESS_Z:
-                return "SEAMLESS_Z";
-            case SEAMLESS_XY:
-                return "SEAMLESS_XY";
-            case SEAMLESS_XZ:
-                return "SEAMLESS_XZ";
-            case SEAMLESS_YZ:
-                return "SEAMLESS_YZ";
-            case SEAMLESS_XYZ:
-                return "SEAMLESS_XYZ";
-        }
-        throw (new UnsupportedOperationException());
-    }
-
-    public static MappingMode get(String string) {
-        if (string.equalsIgnoreCase("NORMAL")) return NORMAL;
-        if (string.equalsIgnoreCase("SEAMLESS_X")) return SEAMLESS_X;
-        if (string.equalsIgnoreCase("SEAMLESS_Y")) return SEAMLESS_Y;
-        if (string.equalsIgnoreCase("SEAMLESS_Z")) return SEAMLESS_Z;
-        if (string.equalsIgnoreCase("SEAMLESS_XY")) return SEAMLESS_XY;
-        if (string.equalsIgnoreCase("SEAMLESS_XZ")) return SEAMLESS_XZ;
-        if (string.equalsIgnoreCase("SEAMLESS_YZ")) return SEAMLESS_YZ;
-        if (string.equalsIgnoreCase("SEAMLESS_XYZ")) return SEAMLESS_XYZ;
-        throw (new UnsupportedOperationException());
-    }
+  NORMAL, SEAMLESS_X, SEAMLESS_Y, SEAMLESS_Z, SEAMLESS_XY, SEAMLESS_XZ, SEAMLESS_YZ, SEAMLESS_XYZ
 }

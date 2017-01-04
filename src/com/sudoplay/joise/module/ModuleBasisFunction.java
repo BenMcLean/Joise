@@ -311,8 +311,8 @@ public class ModuleBasisFunction extends SeedableModule {
 
     ModulePropertyMap props = new ModulePropertyMap(this);
 
-    props.put("basis", getBasisType().toString().toLowerCase());
-    props.put("interpolation", getInterpolationType().toString().toLowerCase());
+    writeEnum("basis", getBasisType(), props);
+    writeEnum("interpolation", getInterpolationType(), props);
     writeSeed(props);
 
     map.put(getId(), props);
