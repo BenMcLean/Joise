@@ -48,14 +48,21 @@
 
 package com.sudoplay.joise;
 
+<<<<<<< HEAD
 import com.sudoplay.joise.module.Module;
 import com.sudoplay.joise.module.SeedableModule;
 import com.sudoplay.util.Assert;
 
+=======
+>>>>>>> parent of 4f10136... Added reflect package from libGDX
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map.Entry;
+
+import com.sudoplay.joise.module.Module;
+import com.sudoplay.joise.module.SeedableModule;
+import com.sudoplay.util.Assert;
 
 public class Joise {
 
@@ -108,7 +115,11 @@ public class Joise {
         Entry<String, ModulePropertyMap> e = it.next();
         ModulePropertyMap props = e.getValue();
         String moduleName = "com.sudoplay.joise.module." + props.get("module");
+<<<<<<< HEAD
         module = Module.makeModule(moduleName);
+=======
+        module = (Module) Class.forName(moduleName).newInstance();
+>>>>>>> parent of 4f10136... Added reflect package from libGDX
         module.buildFromPropertyMap(props, im);
         if (module instanceof SeedableModule
             && ((SeedableModule) module).hasSeedName()) {
